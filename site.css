@@ -1,0 +1,17 @@
+body {
+	margin: 50px;
+}
+
+form {
+	margin-bottom: 10px;
+}
+
+.caption {
+	text-align: center;
+}
+
+.playerCard {
+	display: inline-block;
+	margin: 5px;
+	width: 225px;
+}

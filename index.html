@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>NFL Roster</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="site.css">
+</head>
+
+<body>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-3">
+				<div class="text-center">
+					<h2>Player Search</h2>
+				</div>
+				<form class="form-inline">
+					<div class="form-group">
+						<input class="form-control" id="searchTerm" placeholder="Player Name">
+					</div>
+					<button id="searchBtn" type="button" class="btn btn-primary">Search</button>
+				</form>
+				<div id="searchResults">
+
+				</div>
+			</div>
+			<div class="col-xs-9">
+				<div class="text-center">
+					<h2>My Team</h2>
+				</div>
+				<div id="teamList">
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script id="playerTemplate" type="text/html">
+		<div class="playerCard" draggable="true">
+			<div id="{{ id }}" class="thumbnail">
+				<img src="{{ photo }}" alt="{{ fullname }}" width="170">
+				<div class="caption">
+					<h4>{{ fullname }}</h4>
+					<h4>{{ position }} {{ pro_team }} #{{ jersey }}</h4>
+					<p><button class="btn btn-link">{{ action }}</button></p>
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="app.js"></script>
+</body>
+
+</html>
